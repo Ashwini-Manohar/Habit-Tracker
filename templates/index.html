@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habit Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Habits</h1>
+    <p>Mark today, or click any past square to backfill a day you forgot to log.</p>
+  </header>
+
+  <div id="summary" class="summary"></div>
+
+  <div class="view-toggle">
+    <button id="btn-heatmap" class="active">Heatmap</button>
+    <button id="btn-calendar">Calendar</button>
+  </div>
+
+  <div class="add-row">
+    <input type="text" id="new-habit" placeholder="Add a habit, e.g. Read 10 pages" maxlength="40">
+    <button id="add-btn">Add habit</button>
+  </div>
+
+  <div id="habit-list"></div>
+  <div id="empty-state" class="empty" style="display:none;">No habits yet — add one above to get started.</div>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
