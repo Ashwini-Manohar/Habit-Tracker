@@ -165,7 +165,7 @@ function render() {
 
     const foot = document.createElement("div");
     foot.className = "heatmap-foot";
-    foot.innerHTML = `<span>${DAYS} days</span>`;
+    foot.innerHTML = currentView === "heatmap" ? `<span>${DAYS} days</span>` : "";
     const removeBtn = document.createElement("button");
     removeBtn.className = "remove-btn";
     removeBtn.textContent = "Remove habit";
